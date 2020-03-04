@@ -10,37 +10,27 @@ exports.up = function(knex) {
 
       tbl.string("password", 255).notNullable();
 
-      tbl.string("email", 255).notNullable();
-
-      tbl
-        .integer("booking_id")
-        .unsigned()
-        .notNullable()
-        .references("id")
-        .inTable("booking")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
-
-      tbl
-        .integer("profile_id")
-        .unsigned()
-        .notNullable()
-        .references("id")
-        .inTable("profiles")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+      tbl.string("email", 255);
     })
 
     .createTable("profiles", tbl => {
       tbl.increments();
 
-      tbl.integer("travelers_number").notNullable();
+      tbl.string("number_travelers");
 
-      tbl.string("children-aquipment", 550);
+      tbl.string("children-aquipment", 255);
 
-      tbl.string("luggage-details", 550);
+      tbl.string("luggage-details", 255);
 
-      tbl.string("disability", 540);
+      tbl.string("disability", 255);
+
+      tbl
+        .integer("user_id")
+        .unsigned()
+        .references("id")
+        .inTable("users")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
     });
 };
 

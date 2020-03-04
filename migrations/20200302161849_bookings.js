@@ -3,9 +3,9 @@ exports.up = function(knex) {
     .createTable("booking", tbl => {
       tbl.increments();
 
-      tbl.string("airport_name", 255).notNullable();
+      tbl.string("airport_name", 255);
 
-      tbl.string("airline", 255).notNullable();
+      tbl.string("airline", 255);
 
       tbl.integer("flight_number");
 
@@ -14,14 +14,6 @@ exports.up = function(knex) {
         .unsigned()
         .references("id")
         .inTable("users")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
-
-      tbl
-        .integer("trip_id")
-        .unsigned()
-        .references("id")
-        .inTable("trips")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
     })
