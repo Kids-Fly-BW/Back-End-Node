@@ -42,7 +42,7 @@ this is the shape of the object
 {
 "airport_name": "newwerk",
 "airline": "cold country",
-"flight_number": 7,
+"flight_number": 7,// integer not a string
 "user_id":2
 }
 
@@ -67,7 +67,7 @@ https://kidfly.herokuapp.com//api/profiles
 "children-aquipment":"chair, mask , shoes",
 "luggage-details":"fragile",
 "disability":"blind",
-"user_id": 1
+"user_id": 1 // integer not a string
 }
 
 8-- update profile by id
