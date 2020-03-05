@@ -1,4 +1,15 @@
-https://web.postman.co/collections/10351341-c2be51de-b8a8-4d2f-884c-c171ac0e7d28?version=latest&workspace=de8b1153-cd17-4a8a-8ffb-ab14f56f0316#38f3ca0e-aa66-457a-915f-0ca13088cb9a
+# API Documentation
+
+### 1 Backend deployed at [https://kidfly.herokuapp.com/](add URL here)
+
+### Backend deployed at Herku https://dashboard.heroku.com/apps/kidfly
+
+## getting started
+
+to get the server running locally
+
+-clone thid repo
+-\*\* npm i to install all required dependencies
 
 1 ---This end point will register the user and with username, password, and email. To login only username and password are needed
 
